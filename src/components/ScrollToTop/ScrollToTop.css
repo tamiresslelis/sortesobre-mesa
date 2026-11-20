@@ -1,0 +1,9 @@
+.to-top { display: none; }
+
+@media (max-width: 899px) {
+  .to-top {
+    display: block; position: fixed; z-index: 6; right: calc(17 * var(--u)); bottom: calc(47 * var(--u));
+    width: calc(64 * var(--u)); height: calc(64 * var(--u)); min-width: 48px; min-height: 48px; padding: 0; border-radius: 50%;
+  }
+  .to-top img { width: 100%; height: 100%; display: block; }
+}

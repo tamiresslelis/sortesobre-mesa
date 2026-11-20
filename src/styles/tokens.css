@@ -1,0 +1,10 @@
+:root {
+  --red: #d32929; --tag: #d32934; --cream: #eeeae5; --ink: #292723; --green: #031519; --gold: #ffe2a0;
+  /* 1u = 1px on the Figma artboard: 1440px desktop, 402px mobile */
+  --u: calc(min(100vw, 1600px) / 1440);
+  /* Scroll progress 0→1, written by <App /> */
+  --p: 0;
+}
+@media (max-width: 899px) {
+  :root { --u: calc(100vw / 402); }
+}

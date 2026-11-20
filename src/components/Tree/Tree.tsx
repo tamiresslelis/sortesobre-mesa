@@ -1,17 +1,18 @@
-import trunk from '../assets/tree/trunk.svg';
-import branches from '../assets/tree/branches.svg';
-import garlands from '../assets/tree/garlands.svg';
-import star from '../assets/tree/star.svg';
-import creamTop from '../assets/tree/cream-top.svg';
-import redUpperLeft from '../assets/tree/red-upper-left.svg';
-import goldUpperRight from '../assets/tree/gold-upper-right.svg';
-import creamMiddleLeft from '../assets/tree/cream-middle-left.svg';
-import goldCenter from '../assets/tree/gold-center.svg';
-import redMiddleRight from '../assets/tree/red-middle-right.svg';
-import goldBottomLeft from '../assets/tree/gold-bottom-left.svg';
-import redBottomCenter from '../assets/tree/red-bottom-center.svg';
-import creamBottomRight from '../assets/tree/cream-bottom-right.svg';
-import creamLowRight from '../assets/tree/cream-low-right.svg';
+import './Tree.css';
+import trunk from '../../assets/tree/trunk.svg';
+import branches from '../../assets/tree/branches.svg';
+import garlands from '../../assets/tree/garlands.svg';
+import star from '../../assets/tree/star.svg';
+import creamTop from '../../assets/tree/cream-top.svg';
+import redUpperLeft from '../../assets/tree/red-upper-left.svg';
+import goldUpperRight from '../../assets/tree/gold-upper-right.svg';
+import creamMiddleLeft from '../../assets/tree/cream-middle-left.svg';
+import goldCenter from '../../assets/tree/gold-center.svg';
+import redMiddleRight from '../../assets/tree/red-middle-right.svg';
+import goldBottomLeft from '../../assets/tree/gold-bottom-left.svg';
+import redBottomCenter from '../../assets/tree/red-bottom-center.svg';
+import creamBottomRight from '../../assets/tree/cream-bottom-right.svg';
+import creamLowRight from '../../assets/tree/cream-low-right.svg';
 
 /** inset = [top, right, bottom, left] in % of the 540×680 artboard (from Figma). */
 const layers: { src: string; inset: string; bleed?: string }[] = [
@@ -31,9 +32,9 @@ const layers: { src: string; inset: string; bleed?: string }[] = [
   { src: creamLowRight, inset: '76.03% 24.07% 18.24% 70.74%' },
 ];
 
-export function Tree() {
+export function Tree({ className = '' }: { className?: string }) {
   return (
-    <div className="tree" aria-hidden="true">
+    <div className={`tree ${className}`} aria-hidden="true">
       {layers.map(({ src, inset, bleed }) => (
         <div key={src} className="tree-layer" style={{ inset }}>
           <img src={src} alt="" style={bleed ? { inset: bleed } : undefined} />

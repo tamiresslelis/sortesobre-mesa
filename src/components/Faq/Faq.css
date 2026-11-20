@@ -1,0 +1,18 @@
+.faq {
+  position: relative; z-index: 2; background: var(--green);
+  padding: calc(148 * var(--u)) 0 calc(400 * var(--u));
+  opacity: calc(0.25 + var(--p) * 0.75); transform: translateY(calc((1 - var(--p)) * 60px));
+}
+.faq-inner { margin-left: calc(641 * var(--u)); width: calc(445 * var(--u)); min-width: 300px; display: flex; flex-direction: column; gap: 24px; }
+.faq h2 { font: 600 calc(42 * var(--u)) 'Barlow Condensed', sans-serif; letter-spacing: .9px; margin-bottom: calc(37 * var(--u)); }
+.acc-q { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; font: 600 calc(32 * var(--u)) 'Barlow Condensed', sans-serif; letter-spacing: .9px; min-height: 44px; }
+.acc-a { padding-top: 24px; font-size: 16px; letter-spacing: .9px; display: flex; flex-direction: column; gap: 16px; }
+
+@media (max-width: 899px) {
+  .faq { padding: calc(90.9 * var(--u)) calc(30 * var(--u)) calc(300 * var(--u)); }
+  .faq-inner { margin: 0; width: auto; min-width: 0; gap: calc(24 * var(--u)); }
+  .faq h2 { font-size: calc(32 * var(--u)); margin-bottom: calc(-1 * var(--u)); }
+  .acc-q { font-size: calc(24 * var(--u)); }
+  .acc-a { padding-top: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .faq { transform: none; opacity: 1; } }

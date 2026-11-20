@@ -1,0 +1,21 @@
+.tree-layer { position: absolute; }
+.tree-layer img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; display: block; }
+
+/* Fixed tree: travels from hero centre to bottom-left while scrolling */
+.tree-fixed {
+  position: fixed; z-index: 3; pointer-events: none;
+  width: calc((540 - 135 * var(--p)) * var(--u)); aspect-ratio: 540 / 680;
+  left: calc((588 - 374.5 * var(--p)) * var(--u)); bottom: calc((-48 + 8 * var(--p)) * var(--u));
+}
+.tree-hero { display: none; }
+
+@media (max-width: 899px) {
+  .tree-fixed {
+    width: calc(202.5 * var(--u)); left: calc((100vw - 202.5 * var(--u)) / 2 * (1 - var(--p))); bottom: calc(-25.5 * var(--u));
+  }
+  /* Small tree that settles in the hero's bottom-right */
+  .tree-hero {
+    display: block; position: absolute; left: calc(285.06 * var(--u)); top: calc(693.4 * var(--u));
+    width: calc(151.875 * var(--u)); aspect-ratio: 540 / 680; opacity: var(--p);
+  }
+}
