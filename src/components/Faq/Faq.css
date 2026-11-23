@@ -4,8 +4,10 @@
   opacity: calc(0.25 + var(--p) * 0.75); transform: translateY(calc((1 - var(--p)) * 60px));
 }
 .faq-inner { margin-left: calc(641 * var(--u)); width: calc(445 * var(--u)); min-width: 300px; display: flex; flex-direction: column; gap: 24px; }
-.faq h2 { font: 600 calc(42 * var(--u)) 'Barlow Condensed', sans-serif; letter-spacing: .9px; margin-bottom: calc(37 * var(--u)); }
-.acc-q { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; font: 600 calc(32 * var(--u)) 'Barlow Condensed', sans-serif; letter-spacing: .9px; min-height: 44px; }
+.faq h2 { font: 600 calc(32 * var(--u)) 'Barlow Condensed', sans-serif; letter-spacing: .9px; margin-bottom: calc(37 * var(--u)); }
+.acc-q { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; font: 600 calc(24 * var(--u)) 'Barlow Condensed', sans-serif; letter-spacing: .9px; position: relative; padding: 0; }
+/* keeps the Figma row height while giving a ≥44px touch target */
+.acc-q::after { content: ''; position: absolute; inset: -8px 0; }
 .acc-a { padding-top: 24px; font-size: 16px; letter-spacing: .9px; display: flex; flex-direction: column; gap: 16px; }
 
 @media (max-width: 899px) {

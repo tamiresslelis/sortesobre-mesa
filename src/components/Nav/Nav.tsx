@@ -34,7 +34,7 @@ export function Nav() {
           ))}
         </ul>
         <a className="buy" href="#">
-          Compra<span className="buy-extra"> cartela</span>
+          Compra cartela
         </a>
       </div>
     </nav>
